@@ -31,3 +31,4 @@ const FooterBanner = ({footerBanner: { discount, largeText1, largeText2, saleTim
 }
 
 export default FooterBanner
+
