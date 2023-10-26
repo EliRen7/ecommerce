@@ -12,7 +12,7 @@ const FooterBanner = ({footerBanner: { discount, largeText1, largeText2, saleTim
       <h3>{largeText1}</h3>
       <h3>{largeText2}</h3>
       <p>{saleTime}</p>
-      </div>
+      </div> 
       <div className='right'>
         <p>{smallText}</p>
         <h3>{midText}</h3>
