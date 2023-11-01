@@ -111,3 +111,7 @@ export const getStaticProps = async({params:{slug}}) => {
   
 
 export default ProductDetails
+
+
+
+// export default ProductDetails
