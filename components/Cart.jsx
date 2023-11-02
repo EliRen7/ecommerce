@@ -6,7 +6,6 @@ import toast from 'react-hot-toast';
 
 import { useStateContext } from '../context/StateContext';
 import { urlForImage } from '@/sanity/lib/image';
-// import {urlForImage} from '../../sanity/lib/image'
 // import getStripe from '../lib/getStripe';
 
 const Cart = () => {
@@ -70,6 +69,23 @@ const Cart = () => {
                   </div>
             ))}
           </div>
+          {cartItems.length >= 1 && (
+            <div className='cart-bottom'>
+              <div className='total'>
+                <h3>Subtotal:</h3>
+                <h3>${totalPrice}</h3>
+                </div>
+                <div className='btn-container'>
+                  <button
+                    type='button'
+                    className='btn'
+                    onClick=""
+                  >
+                    Pay with Stripe
+                  </button>
+                  </div>
+              </div>
+          )}
         </div>
     </div>
   )

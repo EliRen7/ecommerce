@@ -60,6 +60,7 @@ const ProductDetails = ({product, products}) => {
         </div>
       </div>  
 
+
       <div className="maylike-products-wrapper">
           <h2>You may also like</h2>
           <div className="marquee">
@@ -97,6 +98,8 @@ export const getStaticPaths = async() => {
   }
 }
 
+// export default blocking
+
 export const getStaticProps = async({params:{slug}}) => {
     const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
     const productsQuery = '*[_type == "product"]'
@@ -111,7 +114,3 @@ export const getStaticProps = async({params:{slug}}) => {
   
 
 export default ProductDetails
-
-
-
-// export default ProductDetails
