@@ -59,8 +59,6 @@ const ProductDetails = ({product, products}) => {
           </div>
         </div>
       </div>  
-
-
       <div className="maylike-products-wrapper">
           <h2>You may also like</h2>
           <div className="marquee">
@@ -74,6 +72,7 @@ const ProductDetails = ({product, products}) => {
     </div>
   )
 }
+
 
 
 export const getStaticPaths = async() => {
@@ -104,11 +103,14 @@ export const getStaticProps = async({params:{slug}}) => {
 
     const product = await client.fetch(query)
     const products = await client.fetch(productsQuery)
-  
+
     return{
       props: {products, product} 
     }
   }
+
+  // props: {products, product}
+  // props: {products, ProductDtails}
   
 
 export default ProductDetails
