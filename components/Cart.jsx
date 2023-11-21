@@ -10,6 +10,7 @@ import { urlForImage } from '@/sanity/lib/image';
 
 const Cart = () => {
   const cartRef = useRef();
+
   const{totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove} = useStateContext();
   return (
     <div className='cart-wrapper' ref={cartRef}>
@@ -33,7 +34,7 @@ const Cart = () => {
                 onClick={() => setShowCart(false)}
                 className='btn'
                 >
-                  Continue Shopping
+                  Continue Shopping 
                 </button>
               </Link>
              </div>
@@ -41,7 +42,7 @@ const Cart = () => {
           <div className='product-container'>
             {cartItems.length >=1 && cartItems.map((item, index) => (
                 <div className='product' key={item._id}>
-                      <img
+                      <img 
                         src={urlForImage(item?.image[0])}
                         className='cart-product-image'
                         />
@@ -68,7 +69,7 @@ const Cart = () => {
                       </div>
                   </div>
             ))}
-          </div>
+          </div> 
           {cartItems.length >= 1 && (
             <div className='cart-bottom'>
               <div className='total'>
@@ -79,9 +80,9 @@ const Cart = () => {
                   <button
                     type='button'
                     className='btn'
-                    onClick=""
-                  >
-                    Pay with Stripe
+                    onClick={handleCheckout}
+                  >  
+                    Pay with Stripe 
                   </button>
                   </div>
               </div>
@@ -92,3 +93,4 @@ const Cart = () => {
 }
 
 export default Cart
+
