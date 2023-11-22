@@ -3,7 +3,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-        const parms = {
+        const params = {
                 submit_type: 'pay',
                 mode: 'payment',
                 payment_method_types: ['card'],
